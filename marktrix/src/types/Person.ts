@@ -1,7 +1,16 @@
 export interface PersonItem {
   id: number;
   firstName: string;
-  gender: string;
-  nationality: string;
-  probability: number;
+  gender: Gender;
+  nationality: Nationality[];
 }
+
+type Gender = {
+  gender: string;
+  probability: string;
+};
+
+type Nationality = {
+  name: string;
+  probability: string;
+};

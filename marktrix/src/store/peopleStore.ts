@@ -6,16 +6,20 @@ export class PeopleStoreImpl {
     {
       id: 55,
       firstName: "israela zimru",
-      gender: "female",
-      nationality: "li",
-      probability: 5,
+      gender: { gender: "female", probability: "0.9" },
+      nationality: [
+        { name: "li", probability: "0.4" },
+        { name: "de", probability: "0.9" },
+      ],
     },
     {
       id: 566,
       firstName: "MIMI",
-      gender: "female",
-      nationality: "au",
-      probability: 50,
+      gender: { gender: "female", probability: "0.9" },
+      nationality: [
+        { name: "li", probability: "0.7" },
+        { name: "de", probability: "0.88" },
+      ],
     },
   ];
 
@@ -30,9 +34,11 @@ export class PeopleStoreImpl {
     const item: PersonItem = {
       id: +Math.random().toFixed(4),
       firstName,
-      gender: "m",
-      nationality: "m",
-      probability: 5,
+      gender: { gender: "female", probability: "0.9" },
+      nationality: [
+        { name: "li", probability: "0.4" },
+        { name: "de", probability: "0.9" },
+      ],
     };
     this.people.push(item);
   }

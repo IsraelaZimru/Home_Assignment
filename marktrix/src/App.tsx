@@ -1,12 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { observer } from "mobx-react";
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import { PeopleStoreImpl } from "../src/store/peopleStore";
 import "./App.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { Button } from "react-bootstrap";
 import PeopleTable from "./components/PeopleTable";
 
 interface PeopleListProps {
@@ -40,9 +37,8 @@ export const App: React.FC<PeopleListProps> = observer(({ peopleStore }) => {
           submit
         </Button>
       </section>
-      <section>
-        <PeopleTable list={peopleStore.people} />
-      </section>
+
+      <PeopleTable list={peopleStore.people} />
     </div>
   );
 });

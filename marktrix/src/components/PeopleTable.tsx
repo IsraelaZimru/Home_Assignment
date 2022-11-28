@@ -14,16 +14,24 @@ const PeopleTable: React.FC<ListProps> = observer(({ list }) => {
           <th>First Name</th>
           <th>gender</th>
           <th>nationality</th>
-          <th>probability.</th>
         </tr>
       </thead>
       <tbody>
         {list.map((item, i) => (
-          <tr>
+          <tr key={i}>
             <th>{item.firstName}</th>
-            <th>{item.gender}</th>
-            <th>{item.nationality}</th>
-            <th>{item.probability}</th>
+            <th>
+              {item.gender.gender} ({item.gender.probability}%)
+            </th>
+            <th>
+              {item.nationality.map((cntry, i) => (
+                <ul>
+                  <li>
+                    {cntry.name} ({cntry.probability}%)
+                  </li>
+                </ul>
+              ))}
+            </th>
           </tr>
         ))}
       </tbody>
