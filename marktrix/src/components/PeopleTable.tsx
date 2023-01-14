@@ -1,9 +1,9 @@
 import { observer } from "mobx-react-lite";
 import Table from "react-bootstrap/Table";
-import { PersonItem } from "../types/Person";
+import { Person } from "../types/Person";
 
 interface ListProps {
-  list: PersonItem[];
+  list: Person[];
 }
 
 const PeopleTable: React.FC<ListProps> = observer(({ list }) => {

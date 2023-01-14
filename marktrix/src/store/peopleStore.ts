@@ -1,8 +1,8 @@
 import { action, computed, makeObservable, observable } from "mobx";
-import { PersonItem } from "../types/Person";
+import { Person } from "../types/Person";
 
 export class PeopleStoreImpl {
-  people: PersonItem[] = [
+  people: Person[] = [
     {
       id: 55,
       firstName: "israela zimru",
@@ -31,7 +31,7 @@ export class PeopleStoreImpl {
   }
 
   addPerson(firstName: string) {
-    const item: PersonItem = {
+    const item: Person = {
       id: +Math.random().toFixed(4),
       firstName,
       gender: { gender: "female", probability: "0.9" },

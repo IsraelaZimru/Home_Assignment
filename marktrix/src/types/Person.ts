@@ -1,4 +1,4 @@
-export interface PersonItem {
+export interface Person {
   id: number;
   firstName: string;
   gender: Gender;
